@@ -44,4 +44,10 @@ function deleteCheck(e) {
     // console.log(todo);
     todo.remove();
   }
+
+  //check todo
+  if(item.classList[0] === "check_btn"){
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+  }
 }
