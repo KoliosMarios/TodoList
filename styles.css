@@ -37,3 +37,41 @@ header, form {
     background: rgb(165, 122, 44);
     color: white;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo_item {
+    flex: 1;
+}
+
+.check_btn, .delete_btn {
+    background: rgb(207, 90, 69);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.check_btn {
+    background-color: rgb(64, 133, 64);
+}
