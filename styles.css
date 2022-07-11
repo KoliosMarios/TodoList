@@ -76,3 +76,7 @@ header, form {
 .check_btn {
     background-color: rgb(64, 133, 64);
 }
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
