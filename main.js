@@ -15,7 +15,7 @@ function addTodo(e) {
   todoDiv.classList.add("todo");
   //create li
   const todoItem = document.createElement("li");
-  todoItem.innerText = "hi!";
+  todoItem.innerText = newTodo.value;
   todoItem.classList.add("todo_item");
   todoDiv.appendChild(todoItem);
   //check button
@@ -30,4 +30,5 @@ function addTodo(e) {
   todoDiv.appendChild(deleteBtn);
   //append div to list
   list.appendChild(todoDiv);
+  newTodo.value = "";
 }
