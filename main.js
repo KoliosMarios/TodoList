@@ -44,6 +44,7 @@ function deleteCheck(e) {
   //delete todo
   if (item.classList[0] === "delete_btn") {
     const todo = item.parentElement;
+    removeLocalTodos(todo);
     // console.log(todo);
     todo.remove();
   }
@@ -97,4 +98,18 @@ function getTodos() {
     //append div to list
     list.appendChild(todoDiv);
   });
+}
+
+//remove todos from localStorage
+function removeLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  const text = todo.children[0].innerText;
+  const index = todos.indexOf(text);
+  todos.splice(index, 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
